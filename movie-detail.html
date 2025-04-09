@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="movie-title">Movie Details - Ishant_Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Ishant_Shop</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mod-apk.html">Mod APKs</a></li>
+                    <li><a href="movie.html">Free Movies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="movie-detail">
+            <div class="detail-header">
+                <img id="movie-poster" src="" alt="Movie Poster" class="detail-poster">
+                <div class="detail-info">
+                    <h2 id="detail-movie-name">Movie Title</h2>
+                    <div class="detail-meta">
+                        <span id="movie-year">Year: </span>
+                        <span id="movie-genre">Genre: </span>
+                        <span id="movie-rating">Rating: </span>
+                        <span id="movie-duration">Duration: </span>
+                    </div>
+                    <a href="#" id="movie-download-btn" class="btn download-btn">Download Now</a>
+                </div>
+            </div>
+
+            <div class="detail-content">
+                <h3>Plot Summary</h3>
+                <p id="movie-plot">Loading plot summary...</p>
+
+                <div class="movie-info">
+                    <h3>Movie Information</h3>
+                    <p><strong>Director:</strong> <span id="movie-director"></span></p>
+                    <p><strong>Cast:</strong> <span id="movie-cast"></span></p>
+                    <p><strong>Language:</strong> <span id="movie-language"></span></p>
+                    <p><strong>Quality:</strong> <span id="movie-quality"></span></p>
+                </div>
+
+                <h3>Screenshots</h3>
+                <div class="screenshots" id="movie-screenshots">
+                    <!-- Screenshots will be loaded by JavaScript -->
+                </div>
+
+                <div class="download-info">
+                    <h3>Download Information</h3>
+                    <p><strong>File Name:</strong> <span id="movie-filename"></span></p>
+                    <p><strong>File Size:</strong> <span id="movie-filesize"></span></p>
+                    <p><strong>Format:</strong> <span id="movie-format"></span></p>
+                    <a href="#" id="movie-download-btn2" class="btn download-btn">Download Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ad Banner -->
+        <div class="ad-banner">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                 data-ad-slot="YOUR_AD_SLOT"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ishant_Shop. All rights reserved.</p>
+            <p>Disclaimer: All content is for educational purposes only.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <!-- The Modal/Lightbox -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <span class="prev">&#10094;</span>
+    <span class="next">&#10095;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption" class="caption"></div>
+</div>
+</body>
+</html>

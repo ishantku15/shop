@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Movies - Ishant_Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Ishant_Shop</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mod-apk.html">Mod APKs</a></li>
+                    <li><a href="movie.html" class="active">Free Movies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <h2>Free Movies</h2>
+            <div class="search-bar">
+                <input type="text" id="movie-search" placeholder="Search movies...">
+                <button onclick="searchMovies()">Search</button>
+            </div>
+            <div class="category-filter">
+                <span>Filter by genre:</span>
+                <select id="movie-genre">
+                    <option value="all">All Genres</option>
+                    <option value="action">Action</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="drama">Drama</option>
+                    <option value="horror">Horror</option>
+                    <option value="sci-fi">Sci-Fi</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Ad Banner -->
+        <div class="ad-banner">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                 data-ad-slot="YOUR_AD_SLOT"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <section class="movie-listings">
+            <div class="grid-container" id="movie-grid">
+                <!-- Movies will be loaded by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025  Ishant_Shop. All rights reserved.</p>
+            <p>Disclaimer: All content is for educational purposes only.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
