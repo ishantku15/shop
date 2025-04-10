@@ -5,67 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Movies - Ishant_Shop</title>
     <link rel="stylesheet" href="css/style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1 class="logo">Ishant_Shop</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="mod-apk.html">Mod APKs</a></li>
-                    <li><a href="movie.html" class="active">Free Movies</a></li>
-                </ul>
-            </nav>
+        <div class="logo-container">
+            <h1 class="logo-animation">Ishant_Shop</h1>
+            <p>HD movies at your fingertips</p>
         </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mod-apk.html">Mod APKs</a></li>
+                <li><a href="movie.html" class="active">Movies</a></li>
+                <li><a href="contact.html">Request</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="container">
-        <section class="search-section">
-            <h2>Free Movies</h2>
-            <div class="search-bar">
-                <input type="text" id="movie-search" placeholder="Search movies...">
-                <button onclick="searchMovies()">Search</button>
-            </div>
-            <div class="category-filter">
-                <span>Filter by genre:</span>
-                <select id="movie-genre">
-                    <option value="all">All Genres</option>
-                    <option value="action">Action</option>
-                    <option value="comedy">Comedy</option>
-                    <option value="drama">Drama</option>
-                    <option value="horror">Horror</option>
-                    <option value="sci-fi">Sci-Fi</option>
-                </select>
-            </div>
-        </section>
+    <div class="ad-banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
 
-        <!-- Ad Banner -->
-        <div class="ad-banner">
+    <main class="movie-page">
+        <div class="movie-categories">
+            <h2>Browse Movies</h2>
+            <div class="category-tabs">
+                <button class="active">All</button>
+                <button>Hollywood</button>
+                <button>Bollywood</button>
+                <button>Anime</button>
+                <button>TV Series</button>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search movies..." id="movie-search">
+            <button>Search</button>
+        </div>
+
+        <div class="grid-container" id="movie-list">
+            <!-- JS will load all movies here -->
+            <div class="loader"></div>
+        </div>
+
+        <div class="ad-content">
             <ins class="adsbygoogle"
                  style="display:block"
-                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
-                 data-ad-slot="YOUR_AD_SLOT"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
             <script>
                  (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
-
-        <section class="movie-listings">
-            <div class="grid-container" id="movie-grid">
-                <!-- Movies will be loaded by JavaScript -->
-            </div>
-        </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025  Ishant_Shop. All rights reserved.</p>
-            <p>Disclaimer: All content is for educational purposes only.</p>
-        </div>
+        <p>&copy; 2023 Ishant_Shop. All rights reserved.</p>
+        <p>Disclaimer: All movies are for educational purposes only.</p>
     </footer>
 
     <script src="js/script.js"></script>
