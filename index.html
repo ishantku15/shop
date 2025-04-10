@@ -3,63 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ishant_Shop - Premium Mod APKs & Free Movies</title>
-    <meta name="description" content="Download premium mod APKs and watch free movies. Request custom mods through our contact form.">
+    <title>Ishant_Shop - Free Mod APKs & Movies</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1836981797720874" crossorigin="anonymous"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-1836981797720874",
-            enable_page_level_ads: true
-        });
-    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1 class="logo">Ishant_Shop</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="mod-apk.html">Mod APKs</a></li>
-                    <li><a href="movie.html">Free Movies</a></li>
-                    <li><a href="#contact">Request Mod</a></li>
-                </ul>
-            </nav>
+        <div class="logo-container">
+            <h1 class="logo-animation">Ishant_Shop</h1>
+            <p>Your one-stop for modded apps & free movies</p>
         </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="mod-apk.html">Mod APKs</a></li>
+                <li><a href="movie.html">Movies</a></li>
+                <li><a href="contact.html">Request</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="container">
-        <!-- Top Banner Ad -->
-        <div class="ad-container">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-1836981797720874"
-                 data-ad-slot="5780402725"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
+    <!-- Top Ad Banner -->
+    <div class="ad-banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
 
+    <main>
         <section class="hero">
-            <h2>Premium Mod APKs & Free Movies</h2>
-            <p>Download the best modded applications and latest movies for free</p>
+            <h2>Download Premium Apps for Free!</h2>
+            <p>Unlocked features, no root required, safe downloads</p>
             <div class="cta-buttons">
-                <a href="mod-apk.html" class="btn">Browse APKs</a>
-                <a href="movie.html" class="btn">Browse Movies</a>
-                <a href="#contact" class="btn btn-secondary">Request Custom Mod</a>
+                <a href="mod-apk.html" class="btn btn-primary">Browse APKs</a>
+                <a href="movie.html" class="btn btn-secondary">Browse Movies</a>
             </div>
         </section>
 
-        <!-- Middle Banner Ad -->
-        <div class="ad-container">
+        <section class="featured">
+            <h2>Featured APKs</h2>
+            <div class="grid-container" id="featured-apks">
+                <!-- JS will load featured APKs here -->
+                <div class="loader"></div>
+            </div>
+        </section>
+
+        <!-- Middle Ad Banner -->
+        <div class="ad-banner">
             <ins class="adsbygoogle"
                  style="display:block"
-                 data-ad-client="ca-pub-1836981797720874"
-                 data-ad-slot="1234567890"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
             <script>
@@ -67,84 +68,38 @@
             </script>
         </div>
 
-        <section class="featured-section">
-            <h3>Featured Mod APKs</h3>
-            <div class="featured-grid" id="featured-apks">
-                <!-- Featured APKs will be loaded by JavaScript -->
+        <section class="featured">
+            <h2>Featured Movies</h2>
+            <div class="grid-container" id="featured-movies">
+                <!-- JS will load featured movies here -->
+                <div class="loader"></div>
             </div>
-            <a href="mod-apk.html" class="see-more">See All APKs →</a>
         </section>
 
-        <!-- Sidebar Ad (Desktop only) -->
-        <aside class="sidebar-ad">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-1836981797720874"
-                 data-ad-slot="9876543210"
-                 data-ad-format="rectangle"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </aside>
-
-        <section class="featured-section">
-            <h3>Featured Movies</h3>
-            <div class="featured-grid" id="featured-movies">
-                <!-- Featured Movies will be loaded by JavaScript -->
-            </div>
-            <a href="movie.html" class="see-more">See All Movies →</a>
+        <section class="cta">
+            <h2>Can't find what you're looking for?</h2>
+            <a href="contact.html" class="btn btn-request">Request Mod/Movie</a>
         </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <h3>Request Custom Mod or Content</h3>
-            <form id="contact-form">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email (optional)</label>
-                    <input type="email" id="email" name="email">
-                </div>
-                <div class="form-group">
-                    <label for="request">What do you need?</label>
-                    <textarea id="request" name="request" rows="5" required placeholder="Example: I need a modded version of XYZ app with premium features unlocked"></textarea>
-                </div>
-                <button type="submit" class="btn">Submit Request</button>
-            </form>
-        </section>
-
-        <!-- Bottom Banner Ad -->
-        <div class="ad-container">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-1836981797720874"
-                 data-ad-slot="2468013579"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
     </main>
 
+    <!-- Bottom Ad Banner -->
+    <div class="ad-banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
     <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="dmca.html">DMCA</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <p>&copy; 2025 Ishant_Shop. All rights reserved.</p>
-            <p class="disclaimer">Disclaimer: All content is provided for educational purposes only. We do not host any copyrighted content.</p>
-        </div>
+        <p>&copy; 2023 Ishant_Shop. All rights reserved.</p>
+        <p>Disclaimer: All apps and movies are for educational purposes only.</p>
     </footer>
 
     <script src="js/script.js"></script>
-    <!-- AdSense Auto Ads -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1836981797720874" crossorigin="anonymous"></script>
 </body>
 </html>
