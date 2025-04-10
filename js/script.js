@@ -37,7 +37,7 @@ const featuredMovies = [
         quality: "1080p",
         size: "2.4GB",
         category: "hollywood",
-        image: "assets/images/avengers.jpg",
+        image: "https://i1.sndcdn.com/artworks-maXjToFRtH7qL5nK-zBs8Eg-t500x500.jpg",
         downloadLink: "#"
     },
     {
