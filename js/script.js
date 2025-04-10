@@ -47,7 +47,7 @@ const featuredMovies = [
         quality: "720p",
         size: "1.8GB",
         category: "hollywood",
-        image: "assets/images/dune.jpg",
+        image: "https://m.media-amazon.com/images/M/MV5BNTc0YmQxMjEtODI5MC00NjFiLTlkMWUtOGQ5NjFmYWUyZGJhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         downloadLink: "#"
     },
     {
