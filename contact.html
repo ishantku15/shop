@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Mods/Movies - Ishant_Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1 class="logo-animation">Ishant_Shop</h1>
+            <p>We fulfill your requests</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mod-apk.html">Mod APKs</a></li>
+                <li><a href="movie.html">Movies</a></li>
+                <li><a href="contact.html" class="active">Request</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <div class="ad-banner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <main class="contact-page">
+        <h2>Request Mods or Movies</h2>
+        <p>Can't find what you're looking for? Send us a request and we'll try to add it!</p>
+        
+        <form id="request-form">
+            <div class="form-group">
+                <label for="request-type">Request Type</label>
+                <select id="request-type" required>
+                    <option value="">Select type</option>
+                    <option value="mod-apk">Mod APK</option>
+                    <option value="movie">Movie</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="name">Name (optional)</label>
+                <input type="text" id="name" placeholder="Your name">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email (optional)</label>
+                <input type="email" id="email" placeholder="Your email">
+            </div>
+            
+            <div class="form-group">
+                <label for="request">Request Details*</label>
+                <textarea id="request" required placeholder="Please provide as much detail as possible (app/movie name, version, etc.)"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-submit">Submit Request</button>
+        </form>
+        
+        <div id="form-message" class="hidden"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Ishant_Shop. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
