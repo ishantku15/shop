@@ -6,16 +6,16 @@ const featuredAPKs = [
         version: "8.8.96.364",
         features: "Unlocked Premium, No Ads, Extreme Quality",
         downloads: "1.2M",
-        image: "assets/spotify.jpg",
+        image: "assets/images/spotify.jpg",
         downloadLink: "#"
     },
     {
         id: 2,
-        name: "YouTube Vanced",
+        name: "YouTube Premium",
         version: "17.03.38",
         features: "Ad-Free, Background Play, Premium Features",
         downloads: "2.5M",
-        image: "assets/youtube.jpg",
+        image: "assets/images/youtube.jpg",
         downloadLink: "#"
     },
     {
@@ -24,7 +24,7 @@ const featuredAPKs = [
         version: "17.50",
         features: "Extra Themes, Hide Online Status, Increased Limits",
         downloads: "850K",
-        image: "assets/whatsapp.jpg",
+        image: "assets/images/whatsapp.jpg",
         downloadLink: "#"
     }
 ];
@@ -36,8 +36,8 @@ const featuredMovies = [
         year: "2019",
         quality: "1080p",
         size: "2.4GB",
-        category: "Hollywood",
-        image: "assets/avengers.jpg",
+        category: "hollywood",
+        image: "assets/images/avengers.jpg",
         downloadLink: "#"
     },
     {
@@ -46,8 +46,8 @@ const featuredMovies = [
         year: "2021",
         quality: "720p",
         size: "1.8GB",
-        category: "Hollywood",
-        image: "assets/dune.jpg",
+        category: "hollywood",
+        image: "assets/images/dune.jpg",
         downloadLink: "#"
     },
     {
@@ -56,8 +56,8 @@ const featuredMovies = [
         year: "2022",
         quality: "1080p",
         size: "2.7GB",
-        category: "Bollywood",
-        image: "assets/rrr.jpg",
+        category: "bollywood",
+        image: "assets/images/rrr.jpg",
         downloadLink: "#"
     }
 ];
@@ -70,7 +70,7 @@ const allAPKs = [
         version: "23.7.3",
         features: "No Watermark, No Ads, Region Unlocked",
         downloads: "1.8M",
-        image: "assets/tiktok.jpg",
+        image: "assets/images/tiktok.jpg",
         downloadLink: "#"
     },
     {
@@ -79,7 +79,7 @@ const allAPKs = [
         version: "210.0.0.30.119",
         features: "Download Media, Hide Stories, No Ads",
         downloads: "1.1M",
-        image: "assets/instagram.jpg",
+        image: "assets/images/instagram.jpg",
         downloadLink: "#"
     },
     {
@@ -88,7 +88,7 @@ const allAPKs = [
         version: "8.4.0",
         features: "Unlocked Premium, 4K Quality, No Geo-Restrictions",
         downloads: "950K",
-        image: "assets/netflix.jpg",
+        image: "assets/images/netflix.jpg",
         downloadLink: "#"
     }
 ];
@@ -101,8 +101,8 @@ const allMovies = [
         year: "2022",
         quality: "1080p",
         size: "2.5GB",
-        category: "Hollywood",
-        image: "assets/batman.jpg",
+        category: "hollywood",
+        image: "assets/images/batman.jpg",
         downloadLink: "#"
     },
     {
@@ -111,8 +111,8 @@ const allMovies = [
         year: "2022",
         quality: "720p",
         size: "1.9GB",
-        category: "Bollywood",
-        image: "assets/kgf2.jpg",
+        category: "bollywood",
+        image: "assets/images/kgf2.jpg",
         downloadLink: "#"
     },
     {
@@ -121,8 +121,18 @@ const allMovies = [
         year: "2020",
         quality: "1080p",
         size: "2.1GB",
-        category: "Anime",
-        image: "assets/demonslayer.jpg",
+        category: "anime",
+        image: "assets/images/demonslayer.jpg",
+        downloadLink: "#"
+    },
+    {
+        id: 7,
+        title: "Stranger Things S4",
+        year: "2022",
+        quality: "1080p",
+        size: "3.2GB",
+        category: "tv-series",
+        image: "assets/images/strangerthings.jpg",
         downloadLink: "#"
     }
 ];
@@ -147,11 +157,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load all movies on movie page
     if (document.getElementById('movie-list')) {
         loadAllMovies();
-    }
-    
-    // Handle contact form submission
-    if (document.getElementById('request-form')) {
-        setupContactForm();
     }
     
     // Setup search functionality for APKs
@@ -220,13 +225,15 @@ function createAPKCard(apk) {
     card.className = 'card';
     
     card.innerHTML = `
-        <img src="${apk.image}" alt="${apk.name}">
+        <img src="${apk.image}" alt="${apk.name}" loading="lazy">
         <div class="card-content">
             <h3>${apk.name}</h3>
             <p><strong>Version:</strong> ${apk.version}</p>
             <p><strong>Features:</strong> ${apk.features}</p>
             <p><strong>Downloads:</strong> ${apk.downloads}</p>
-            <a href="${apk.downloadLink}" class="download-btn">Download Now</a>
+            <a href="${apk.downloadLink}" class="download-btn">
+                <i class="fas fa-download"></i> Download
+            </a>
         </div>
     `;
     
@@ -239,57 +246,19 @@ function createMovieCard(movie) {
     card.className = 'card';
     
     card.innerHTML = `
-        <img src="${movie.image}" alt="${movie.title}">
+        <img src="${movie.image}" alt="${movie.title}" loading="lazy">
         <div class="card-content">
             <h3>${movie.title} (${movie.year})</h3>
             <p><strong>Quality:</strong> ${movie.quality}</p>
             <p><strong>Size:</strong> ${movie.size}</p>
-            <p><strong>Category:</strong> ${movie.category}</p>
-            <a href="${movie.downloadLink}" class="download-btn">Download Now</a>
+            <p><strong>Category:</strong> ${movie.category.charAt(0).toUpperCase() + movie.category.slice(1)}</p>
+            <a href="${movie.downloadLink}" class="download-btn">
+                <i class="fas fa-download"></i> Download
+            </a>
         </div>
     `;
     
     return card;
-}
-
-// Setup Contact Form
-function setupContactForm() {
-    const form = document.getElementById('request-form');
-    const messageDiv = document.getElementById('form-message');
-    
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form values
-        const requestType = document.getElementById('request-type').value;
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const requestDetails = document.getElementById('request').value;
-        
-        // Simple validation
-        if (!requestType || !requestDetails) {
-            showMessage('Please fill in all required fields.', 'error');
-            return;
-        }
-        
-        // In a real implementation, you would send this data to a server
-        // For now, we'll just show a success message
-        showMessage('Your request has been submitted successfully! We will try to fulfill it soon.', 'success');
-        form.reset();
-    });
-}
-
-// Show Form Message
-function showMessage(text, type) {
-    const messageDiv = document.getElementById('form-message');
-    messageDiv.textContent = text;
-    messageDiv.className = type;
-    messageDiv.classList.remove('hidden');
-    
-    // Hide message after 5 seconds
-    setTimeout(() => {
-        messageDiv.classList.add('hidden');
-    }, 5000);
 }
 
 // Setup APK Search
@@ -382,8 +351,8 @@ function setupMovieCategories() {
             // Add active class to clicked button
             this.classList.add('active');
             
-            // Get category
-            const category = this.textContent;
+            // Get category from data attribute
+            const category = this.dataset.category;
             
             // Filter movies
             filterMoviesByCategory(category);
@@ -396,7 +365,7 @@ function filterMoviesByCategory(category) {
     const container = document.getElementById('movie-list');
     container.innerHTML = '';
     
-    if (category === 'All') {
+    if (category === 'all') {
         loadAllMovies();
         return;
     }
