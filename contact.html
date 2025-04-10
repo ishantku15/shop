@@ -3,77 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request Mods/Movies - Ishant_Shop</title>
+    <title>Request Content - Ishant_Ishant</title>
     <link rel="stylesheet" href="css/style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <h1 class="logo-animation">Ishant_Shop</h1>
+            <h1 class="logo-animation">Ishant_<span>Ishant</span></h1>
             <p>We fulfill your requests</p>
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="mod-apk.html">Mod APKs</a></li>
-                <li><a href="movie.html">Movies</a></li>
-                <li><a href="contact.html" class="active">Request</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="mod-apk.html"><i class="fas fa-mobile-alt"></i> Mod APKs</a></li>
+                <li><a href="movie.html"><i class="fas fa-film"></i> Movies</a></li>
+                <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> Request</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="ad-banner">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-             data-ad-slot="XXXXXXXXXX"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-
     <main class="contact-page">
-        <h2>Request Mods or Movies</h2>
-        <p>Can't find what you're looking for? Send us a request and we'll try to add it!</p>
-        
-        <form id="request-form">
-            <div class="form-group">
-                <label for="request-type">Request Type</label>
-                <select id="request-type" required>
-                    <option value="">Select type</option>
-                    <option value="mod-apk">Mod APK</option>
-                    <option value="movie">Movie</option>
-                </select>
-            </div>
+        <div class="contact-container">
+            <h2><i class="fas fa-paper-plane"></i> Request Content</h2>
+            <p>Can't find what you're looking for? Send us a request and we'll add it within 24 hours!</p>
             
-            <div class="form-group">
-                <label for="name">Name (optional)</label>
-                <input type="text" id="name" placeholder="Your name">
-            </div>
+            <form id="request-form" onsubmit="sendEmailRequest(); return false;">
+                <div class="form-group">
+                    <label for="request-type"><i class="fas fa-tag"></i> Request Type</label>
+                    <select id="request-type" required>
+                        <option value="">Select type</option>
+                        <option value="mod-apk">Mod APK</option>
+                        <option value="movie">Movie</option>
+                        <option value="tv-show">TV Show</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Name (optional)</label>
+                    <input type="text" id="name" placeholder="Your name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email (optional)</label>
+                    <input type="email" id="email" placeholder="Your email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="request"><i class="fas fa-edit"></i> Request Details*</label>
+                    <textarea id="request" required placeholder="Please provide as much detail as possible (app/movie name, version, etc.)"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-submit">
+                    <i class="fas fa-paper-plane"></i> Submit Request
+                </button>
+            </form>
             
-            <div class="form-group">
-                <label for="email">Email (optional)</label>
-                <input type="email" id="email" placeholder="Your email">
-            </div>
-            
-            <div class="form-group">
-                <label for="request">Request Details*</label>
-                <textarea id="request" required placeholder="Please provide as much detail as possible (app/movie name, version, etc.)"></textarea>
-            </div>
-            
-            <button type="submit" class="btn btn-submit">Submit Request</button>
-        </form>
-        
-        <div id="form-message" class="hidden"></div>
+            <div id="form-message" class="hidden"></div>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2023 Ishant_Shop. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3 class="logo-animation">Ishant_<span>Ishant</span></h3>
+                <p>Your trusted source for premium content</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="mod-apk.html"><i class="fas fa-chevron-right"></i> Mod APKs</a></li>
+                    <li><a href="movie.html"><i class="fas fa-chevron-right"></i> Movies</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Requests</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Ishant_Ishant. All rights reserved.</p>
+            <p>Disclaimer: All content is provided for educational purposes only.</p>
+        </div>
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        function sendEmailRequest() {
+            const requestType = document.getElementById('request-type').value;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const requestDetails = document.getElementById('request').value;
+            
+            if (!requestType || !requestDetails) {
+                showMessage('Please fill in all required fields.', 'error');
+                return;
+            }
+            
+            // Construct mailto link
+            let subject = `Request for ${requestType}`;
+            let body = `Request Details: ${requestDetails}`;
+            
+            if (name) body += `\n\nName: ${name}`;
+            if (email) body += `\nEmail: ${email}`;
+            
+            // URL encode the subject and body
+            subject = encodeURIComponent(subject);
+            body = encodeURIComponent(body);
+            
+            // Redirect to email client
+            window.location.href = `mailto:your-email@example.com?subject=${subject}&body=${body}`;
+            
+            // Show success message
+            showMessage('Your request has been prepared. Please send the email that opened in your email client.', 'success');
+            document.getElementById('request-form').reset();
+        }
+        
+        function showMessage(text, type) {
+            const messageDiv = document.getElementById('form-message');
+            messageDiv.textContent = text;
+            messageDiv.className = type;
+            messageDiv.classList.remove('hidden');
+            
+            setTimeout(() => {
+                messageDiv.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
 </body>
 </html>
